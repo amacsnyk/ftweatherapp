@@ -1,0 +1,31 @@
+{
+  "name": "ftweatherapp",
+  "version": "1.0.0",
+  "description": "Weather app for FT tech test",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape ./src/tests/*.js | tap-spec",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbinlondon/ftweatherapp.git"
+  },
+  "author": "Kate Beard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbinlondon/ftweatherapp/issues"
+  },
+  "homepage": "https://github.com/sbinlondon/ftweatherapp#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.3",
+    "supertest": "^3.1.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "serve-favicon": "^2.5.0"
+  }
+}
