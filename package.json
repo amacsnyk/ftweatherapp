@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/sbinlondon/ftweatherapp#readme",
   "devDependencies": {
+    "env2": "^2.2.2",
     "nodemon": "^1.18.3",
     "supertest": "^3.1.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "serve-favicon": "^2.5.0"
