@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(hsl(0, 100%, 81%), hsl(34, 100%, 77%));
+  font-size: 1.5rem;
+  line-height: 1.65;
+  letter-spacing: 0.15rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: 0.25rem;
+}
+
+input {
+  width: 50%;
+  height: 100px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+}
+
+/* CLASSES */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(240, 100%, 25%);
+  color: hsl(0, 0%, 100%);
+  width: 100vw;
+  height: 15vh;
+  clip-path: polygon(0 10%, 70% 10%, 80% 50%, 70% 90%, 0 90%);
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* IDS */
+
+/* MEDIA QUERIES */
+

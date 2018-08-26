@@ -26,6 +26,10 @@ timeline
 - initialise repo
 - set up heroku and cd on heroku from github
 - set up file structure for express with handlebars
+- get some basic pages set up - error and home views
+- very basic css styling
+- chose openweatherapi over darksky because of its use of city names instead of lat/long coordinates in the request url - this is because I wanted to be able to use the JSON file of world cities (pop > 15K) to create an autocomplete suggestion for the form, and easily insert this into the api call
+- looked at express middleware for api calls with promises - got vs axios. Got has a much larger userbase, but I appreciated axios's browser compatibility table, especially since I want to ensure this site is accessible and works across as all browsers and devices, so I chose this
 
 accessibility
 
