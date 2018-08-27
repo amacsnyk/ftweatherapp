@@ -4,9 +4,18 @@
   </header>
   <div class="weather-container">
     <div><p>Weather to go here</p></div>
-    <form>
-      <label for="city-input"></label>
-      <input type="text">
+    <form action='/' method='POST'>
+      <label for="city"></label>
+      <input type="text" name="city" placeholder="Munich" required >
+      <button type="submit">SUBMIT</button>
     </form>
+  </div>
+  <div class="result-container">
+    {{#if weather}}
+      <p>{{weather}}</p>
+    {{/if}}
+    {{#unless weather}}
+      <p>Enter a city name to find out the weather!</p>
+    {{/unless}}
   </div>
 </section>

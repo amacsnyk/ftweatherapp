@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
-
-// import controllers
-
+const bodyParser = require('body-parser');
 const home = require('./home');
 const error = require('./error');
 
-// add routes
 
+router.use(bodyParser.urlencoded({ extended: true }));
 router.get('/', home.get);
+router.post('/', home.post);
 router.use(error.client);
 router.use(error.server);
 
