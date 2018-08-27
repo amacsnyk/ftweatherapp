@@ -6,8 +6,16 @@
     <div><p>Weather to go here</p></div>
     <form action='/' method='POST'>
       <label for="city"></label>
-      <input type="text" name="city" placeholder="Munich">
+      <input type="text" name="city" placeholder="Munich" required >
       <button type="submit">SUBMIT</button>
     </form>
+  </div>
+  <div class="result-container">
+    {{#if weather}}
+      <p>{{weather}}</p>
+    {{/if}}
+    {{#unless weather}}
+      <p>Enter a city name to find out the weather!</p>
+    {{/unless}}
   </div>
 </section>
