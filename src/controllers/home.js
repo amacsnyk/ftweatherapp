@@ -10,11 +10,14 @@ exports.post = (req, res) => {
   const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + req.body.city + '&appid=' + APPID;
   axios.get(url)
     .then(response => {
-      const resText = 'Today there is ' + response.data.weather[0].description + ' in ' + response.data.name + ', and the temperature is currently ' + (Math.floor(response.data.main.temp - 273.15)) + 'C'
-      console.log(resText);
+      const weatherDesc = response.data.weather[0].description
+      const cityName = response.data.name
+      const temp = response.data.main.temp
       res.render('home', { 
-        activePage: { home: true }, 
-        weather: resText
+        activePage: { home: true },
+        weather: weatherDesc,
+        city: cityName,
+        tempK: temp
       });
     })
     .catch(error => {
