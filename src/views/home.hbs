@@ -1,20 +1,30 @@
-<section class="flex-container-column flex-space-around" id="main-content">
-  <header>
-    <h1>Weather app</h1>
-  </header>
-  <form action='/' method='POST' class="flex-container-column" class="flex-container-column" id="form">
-    <label for="city"></label>
-    <input type="text" name="city" placeholder="Munich" required >
-    <button type="submit">SUBMIT</button>
+<section class="o-grid-container">
+  <div class="o-grid-row border" data-o-grid-colspan="S10 M8 center">
+    <header>
+      {{#if weather}}
+        <p>Here's the weather for {{city}}! Want to see another city? Just search again!</p>
+      {{else}}
+        <p>Enter a city name to find out the weather!</p>
+      {{/if}}
+    </header>
+  </div>
+
+  <!--Still to be refactored-->
+
+  <form action='/' method='POST' class="o-grid-row" id="form" data-o-grid-colspan="S10 M8 center">
+    <div class="o-grid-row border" data-o-grid-colspan="S10 M8 center">
+      <label for="city"></label>
+      <input type="text" name="city" placeholder="Munich" required >
+    </div>
+    <div class="o-grid-row border" data-o-grid-colspan="S10 M8 center">
+      <button type="submit">SUBMIT</button>
+    </div>
   </form>
-  <div class="flex-container-column" id="forecast-result">
+  <div class="o-grid-row border" data-o-grid-colspan="S10 M8 center" id="forecast-result">
     {{#if weather}}
-      <h2>{{weather}}</h2>
-      <h3>{{city}}</h3>
-      <h4>{{tempK}}</h4>
+      <h2>{{city}}</h2>
+      <h3>Now in {{city}}: {{weather}}</h3>
+      <h4>Temperature: {{tempC tempK}}</h4>
     {{/if}}
-    {{#unless weather}}
-      <p>Enter a city name to find out the weather!</p>
-    {{/unless}}
   </div>
 </section>

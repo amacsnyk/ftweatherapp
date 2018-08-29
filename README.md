@@ -33,6 +33,7 @@ timeline
 - had trouble with modularisation and abstraction - previous api projects were used before learning express and handlebars, so getting the right code in the right places and exporting/importing it all was a huge task, but slowly chipping away at it and looking at old projects as a guide, I was able to figure it out
 - finished api functionality and had it showing on the page
 - different error handling for 404, 500, and also if the api call cannot be made due to bad user input
+- beginning to focus more on design, added o-grid and o-typography; decided on a light color scheme to show off the typography; had to change from flexbox to o-grid
 
 accessibility
 
@@ -51,3 +52,6 @@ browsers
 
 - test IE, Firefox, Safari, Opera, Chrome
 
+lessons
+
+- I didn't know if I'd be using origami components beforehand and got to it later. It was difficult to refactor the layout and involved a bit more time than I woud have liked to spend to do this. If I'd designed and laid out the webpage using o-grid from the beginning, it would have been much easier.
