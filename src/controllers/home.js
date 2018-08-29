@@ -1,9 +1,13 @@
 const env = require('env2')('./config.env');
 const APPID = process.env.APPID
 const axios = require('axios');
+const listOfCities = require('../models/index')
 
 exports.get = (req, res) => {
-  res.render('home', { activePage: { home: true } });
+  res.render('home', { 
+    activePage: { home: true },
+    cities: { listOfCities }
+   });
 };
 
 exports.post = (req, res) => {
@@ -13,11 +17,15 @@ exports.post = (req, res) => {
       const weatherDesc = response.data.weather[0].description
       const cityName = response.data.name
       const temp = response.data.main.temp
+      const humidity = response.data.main.humidity
+      const countryCode = response.data.sys.country
       res.render('home', { 
         activePage: { home: true },
         weather: weatherDesc,
         city: cityName,
-        tempK: temp
+        tempK: temp,
+        percHumidity: humidity,
+        country: countryCode
       });
     })
     .catch(error => {

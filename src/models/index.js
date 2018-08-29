@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "country": "Andorra",
     "geonameid": 3040051,

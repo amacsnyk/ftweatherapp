@@ -1,0 +1,1 @@
+module.exports = num => Math.floor(num * (9/5) - 459.67)
