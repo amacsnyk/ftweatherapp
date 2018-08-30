@@ -1,15 +1,15 @@
 const env = require('env2')('./config.env');
 const WEATHERAPPID = process.env.WEATHERAPPID
-const LOCATIONAPPID = process.env.LOCATIONAPPID
 const TIMEZONEAPPID = process.env.TIMEZONEAPPID
+const GOOGLEAPPID = process.env.GOOGLEAPPID
 const axios = require('axios');
 
 exports.get = (req, res) => {
-    const url = 'http://api.ipstack.com/check?access_key=' + LOCATIONAPPID
-    axios.get(url)
+    const url = 'https://www.googleapis.com/geolocation/v1/geolocate?key=' + GOOGLEAPPID
+    axios.post(url)
       .then(response => {
-        const lat = response.data.latitude
-        const lon = response.data.longitude
+        const lat = response.data.location.lat
+        const lon = response.data.location.lng
         const newurl = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + WEATHERAPPID;
         axios.get(newurl)
         .then(response => {
