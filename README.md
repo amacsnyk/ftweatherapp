@@ -34,6 +34,10 @@ timeline
 - finished api functionality and had it showing on the page
 - different error handling for 404, 500, and also if the api call cannot be made due to bad user input
 - beginning to focus more on design, added o-grid and o-typography; decided on a light color scheme to show off the typography; had to change from flexbox to o-grid
+- difficulties having geolocation on page load - problems with template not rendering. Frustrating to not be able to figure this out in the time given, and want to look into it, though figured out a workaround. (explain)
+- got around html5 geolocation by using an ip geolocator. This worked on localhost until I uploaded to heroku.... then of course it geolocates to heroku's servers in Ashburn VA.
+- ended up replacing the ip api call with google maps geolocation api. then it was fine.
+
 
 accessibility
 
@@ -55,3 +59,4 @@ browsers
 lessons
 
 - I didn't know if I'd be using origami components beforehand and got to it later. It was difficult to refactor the layout and involved a bit more time than I woud have liked to spend to do this. If I'd designed and laid out the webpage using o-grid from the beginning, it would have been much easier.
+- I want to dig deeper into templating engines and become better at them. I felt limited in what I knew already and had to do what felt like hacky workarouns to get geolocation working on page load. However, I was happy I got it working. I felt that if I'd been pair programming or had a team around me to ask, I would have learned the proper way to do it and I hope I still will.
