@@ -1,12 +1,9 @@
 <script>
-  function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function showPosition(position) {
-    console.log(position.coords.latitude)
-    console.log(position.coords.longitude) 
-});
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function displayLocationInfo(position) {
+      const lng = position.coords.longitude;
+      const lat = position.coords.latitude;
+      console.log(`longitude: ${ lng } | latitude: ${ lat }`);
+    });
+  }
 </script>
