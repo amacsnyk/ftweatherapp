@@ -1,10 +1,10 @@
 <section class="o-grid-container">
   <div class="o-grid-row" data-o-grid-colspan="10 center">
     <header id="introduction">
-      {{#if weather}}
-        <p>Here's the weather for {{city}}! Want to see another city? Just search again!</p>
+      {{#if homeWeather}}
+        <p>Here's the weather for {{city}}! Want to see another city? Just search below!</p>
       {{else}}
-        <p>Enter a city name to find out the weather!</p>
+        <p>Hold tight - getting weather for your location...</p>
       {{/if}}
     </header>
   </div>
@@ -21,8 +21,15 @@
   <div class="o-grid-row" data-o-grid-colspan="10 center" id="forecast-result">
     {{#if weather}}
       <h2>{{city}}, {{country}}</h2>
+      <h2>{{timeData}}</h2>
       <h3>Now in {{city}}: {{weather}}</h3>
-      <h4>Temperature: {{tempC tempK}}</h4>
+      <h4>Temperature: {{tempC tempK}}° C / {{tempF tempK}}° F</h4>
+      <h4>{{percHumidity}}% humidity</h4>
+    {{else}}
+      <h2>{{city}}, {{country}}</h2>
+      <h2>{{date timeData}}</h2>
+      <h3>Now in {{city}}: {{homeWeather}}</h3>
+      <h4>Temperature: {{tempC tempK}}° C / {{tempF tempK}}° F</h4>
       <h4>{{percHumidity}}% humidity</h4>
     {{/if}}
   </div>

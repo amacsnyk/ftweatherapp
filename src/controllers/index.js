@@ -6,6 +6,10 @@ const error = require('./error');
 
 
 router.use(bodyParser.urlencoded({ extended: true }));
+router.use(function (req, res, next) {
+  //function here
+  next()
+})
 router.get('/', home.get);
 router.post('/', home.post);
 router.use(error.client);
