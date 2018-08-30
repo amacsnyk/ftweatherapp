@@ -1,4 +1,5 @@
 module.exports = {
   tempF: require('./tempF'),
-  tempC: require('./tempC')
+  tempC: require('./tempC'),
+  date: require('./date')
 };
