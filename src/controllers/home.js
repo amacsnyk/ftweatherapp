@@ -8,6 +8,7 @@ exports.get = (req, res) => {
     const url = 'https://www.googleapis.com/geolocation/v1/geolocate?key=' + GOOGLEAPPID
     axios.post(url)
       .then(response => {
+        console.log(response)
         const lat = response.data.location.lat
         const lon = response.data.location.lng
         const newurl = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + WEATHERAPPID;
