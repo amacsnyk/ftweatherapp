@@ -1,9 +1,28 @@
 <script>
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function displayLocationInfo(position) {
-      const lng = position.coords.longitude;
-      const lat = position.coords.latitude;
-      console.log(`longitude: ${ lng } | latitude: ${ lat }`);
-    });
+  function xhr(method, url, callback) {
+  if (typeof callback === 'function') {
+    const request = new XMLHttpRequest();
+    request.open(method, url, true);
+    request.onreadystatechange = () => {
+      if (request.readyState === 4 && request.status === 200) {
+        callback();
+      }
+    };
+    request.send(null);
   }
+}
+
+function geoLocate(callback) {
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        callback(position.coords.latitude, position.coords.longitude);
+      });
+    } else {
+      console.log('Geolocation not available, sorry');
+  }
+}
+
+  geoLocate((latitude, longitude) => {
+      location.assign(`/weather/lat=${latitude}&long=${longitude}`);
+  })
 </script>

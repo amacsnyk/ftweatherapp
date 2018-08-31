@@ -1,36 +1,7 @@
 <section class="o-grid-container">
   <div class="o-grid-row" data-o-grid-colspan="10 center">
-    <header id="introduction">
-      {{#if homeWeather}}
-        <p>Here's the weather for {{city}}! Want to see another city? Just search below!</p>
-      {{else}}
-        <p>Hold tight - getting weather for your location...</p>
-      {{/if}}
+    <header class="three-em-div">
+      <h1>Hold tight! Getting your weather now...</h1>
     </header>
-  </div>
-
-  <form action='/' method='POST' class="o-grid-row" id="search-form" data-o-grid-colspan="full-width center">
-    <div class="o-grid-row" data-o-grid-colspan="full-width center">
-      <input id="input" class="o-grid-row" data-o-grid-colspan="one-half center" type="text" name="city" placeholder="Munich" autocomplete="off" autofocus required >
-    </div>
-    <div class="o-grid-row" data-o-grid-colspan="full-width center">
-      <button class="o-grid-row" data-o-grid-colspan="one-half center" type="submit">Get weather!</button>
-    </div>
-  </form>
-
-  <div class="o-grid-row" data-o-grid-colspan="10 center" id="forecast-result">
-    {{#if weather}}
-      <h2>{{city}}, {{country}}</h2>
-      <h2>{{timeData}}</h2>
-      <h3>Now in {{city}}: {{weather}}</h3>
-      <h4>Temperature: {{tempC tempK}}° C / {{tempF tempK}}° F</h4>
-      <h4>{{percHumidity}}% humidity</h4>
-    {{else}}
-      <h2>{{city}}, {{country}}</h2>
-      <h2>{{date timeData}}</h2>
-      <h3>Now in {{city}}: {{homeWeather}}</h3>
-      <h4>Temperature: {{tempC tempK}}° C / {{tempF tempK}}° F</h4>
-      <h4>{{percHumidity}}% humidity</h4>
-    {{/if}}
   </div>
 </section>
