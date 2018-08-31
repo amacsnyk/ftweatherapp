@@ -9,7 +9,9 @@ Mission: Possible!
 ## Requirements
 
 ✅ **Display real-time weather for your location**: when you first visit the site, it geolocates you and serves up the weather for your location :earth_africa: 
+
 ✅ **Allow you to choose the city you get weather for**: once the first page with local weather is loaded, you can search for any city :city_sunrise: 
+
 ✅ **Doesn't rely on client-side frameworks and libraries**: no jQuery or React involved :+1:
 
 ## Extras
