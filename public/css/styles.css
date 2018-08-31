@@ -45,6 +45,17 @@ button:focus {
 
 /* CLASSES */
 
+.three-em-div {
+  min-height: 3em;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.two-em-div {
+  min-height: 2em;
+  text-align: center;
+  padding-top: 1.5rem;
+}
 
 /* IDS */
 
@@ -55,22 +66,4 @@ button:focus {
   text-align: center;
   padding-top: 1.5rem;
   clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
-}
-
-#introduction, #uh-oh {
-  min-height: 3em;
-  text-align: center;
-  padding-top: 1.5rem;
-}
-
-#search-form, #error-message {
-  min-height: 2em;
-  text-align: center;
-  padding-top: 1.5rem;
-}
-
-#forecast-result {
-  min-height: 2em;
-  text-align: center;
-  padding-top: 1.5rem;
 }
