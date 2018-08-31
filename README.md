@@ -17,9 +17,10 @@ Mission: Possible!
 ## Extras
 
 ✅ **It's accessible**:
-* I used semantic HTML elements as much as possible
+* Semantic HTML elements were used as much as possible
 * The color scheme (tested with the Chrome colorblinder extension) is high contrast and is still readable with many types of colorblindness
 * The window immediately focuses to the search input, and :hover and :focus elements give a bright blue outline to let the user know they are selected.
+* Users can tab through using a keyboard and hit enter to search.
 
 ✅ **It's responsive**: using a grid (or rather, o grid :eyes:) made the layout responsive for all sizes of screen  
 ✅ **It uses Origami components**: after reading about some of the Origami components used at the FT, I chose to use:
@@ -27,6 +28,7 @@ Mission: Possible!
 * o-grid: usually I'm a flexbox fan, but the idea of a ready-built responsive grid model seemed too good to pass up.
 
 ✅ **It's built using JS and Node, and is server-side rendered**: using Express as the Node framework, and Handlebars as the templating engine
+
 ✅ **It's deployed to Heroku**: which you can see [here!](https://ftweatherkb.herokuapp.com/)
 
 ![](https://media.giphy.com/media/K72vGV2B0GC5y/giphy.gif)
